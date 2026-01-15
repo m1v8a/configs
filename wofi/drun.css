@@ -1,0 +1,36 @@
+@define-color bg #000511;
+@define-color bg_transparent_03 rgba(0,5,17,0.3);
+@define-color bg_transparent_01 rgba(0,5,17,0.1);
+@define-color fg_dark #000511;
+@define-color fg_light #D9D0B4;
+@define-color accent #004786;
+
+
+#window {
+	background-color: @bg; 
+	color: @fg_light;
+}
+
+
+#entry:selected {
+	background-color: @accent;
+}
+
+
+
+#input {
+	background-color: transparent;
+	padding: 12px;
+	font-size: 24px;
+	color: @fg_light;
+	border: 1px solid #2c4875;
+}
+
+
+
+#entry {
+	background-color: transparent;
+	font-size: 16px;
+	padding: 12px;
+}
+
