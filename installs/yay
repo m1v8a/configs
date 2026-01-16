@@ -1,0 +1,15 @@
+#!/bin/bash
+
+is_installed=$(pacman -Q yay >/dev/null 2>&1 || echo "not installed")
+
+if [[ ! $is_installed != "not installed" ]]; then
+	cd ..
+	git clone https://aur.archlinux.org/yay.git
+	cd yay
+	makepkg -si
+	cd ..
+	rm -rf yay
+else
+	echo "Skipping yay, Already installed"
+fi
+

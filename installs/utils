@@ -1,0 +1,9 @@
+#!/bin/bash
+
+sudo pacman -S --noconfirm --needed brightnessctl swaybg xdg-user-dirs base-devel
+
+# brightnessctl
+sudo usermod -aG video $USER
+
+# Home folder structure
+xdg-user-dirs-update

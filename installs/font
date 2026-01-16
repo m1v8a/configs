@@ -1,0 +1,5 @@
+#!/bin/bash
+
+sudo pacman -S --noconfirm --needed ttf-fircode-nerd-font
+
+fc-cache -fv
