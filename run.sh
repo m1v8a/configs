@@ -6,7 +6,7 @@ sudo pacman --noconfirm -Syu
 sudo pacman -S --noconfirm --needed git base-devel
 
 # WOFI, KITTY, CHROME, VSCODE, GIMP, NVIM
-sudo pacman --noconfirm -S --needed waybar wofi kitty chromium code gimp neovim
+sudo pacman --noconfirm -S --needed waybar wofi kitty chromium code gimp
 # TTF-FIRACODE, BRIGHTNESSCTL, SWAYBG, XDG-USER-DIRS
 sudo pacman --noconfirm -S --needed ttf-firacode-nerd brightnessctl swaybg xdg-user-dirs
 
@@ -32,9 +32,6 @@ export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 nvm install 24
-
-# FOR NVIM TREESITTER
-npm install -g tree-sitter-cli
 
 # Update the configs with my configs
 cp -r ./hypr ~/.config
