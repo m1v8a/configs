@@ -5,7 +5,7 @@ sudo pacman --noconfirm -Syu
 
 sudo pacman -S --noconfirm --needed git base-devel
 
-sudo pacman --noconfirm -S waybar wofi kitty chromium code 
+sudo pacman --noconfirm -S waybar wofi kitty chromium code gimp
 sudo pacman --noconfirm -S ttf-firacode-nerd brightnessctl swaybg xdg-user-dirs
 yay -S --noconfirm zen-browser-bin
 

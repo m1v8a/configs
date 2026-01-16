@@ -39,6 +39,13 @@
 
 
 #workspaces button.active {
-	background-color: @accent;
+	background-color: #ffa600;
 }
+
+#workspaces button.active .workspace-label {
+	color: #000
+}
+
+
+
 
