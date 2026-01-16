@@ -24,6 +24,18 @@ makepkg -si
 cd ..
 rm -rf yay
 
+#NODEJS
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+nvm install 24
+
+# FOR NVIM TREESITTER
+npm install -g tree-sitter-cli
+
 # Update the configs with my configs
 cp -r ./hypr ~/.config
 cp -r ./waybar ~/.config
