@@ -1,0 +1,51 @@
+@define-color bg #000511;
+@define-color bg_transparent_03 rgba(0,5,17,0.3);
+@define-color bg_transparent_01 rgba(0,5,17,0.1);
+@define-color fg_dark #000511;
+@define-color fg_light #D9D0B4;
+@define-color accent #004786;
+
+* {
+	font-family: "FiraCode Nerd Font";
+	font-size: 12px;
+	color: @fg_light;
+	letter-spacing: 3px;
+	font-weight: 700;
+}
+
+#waybar {
+	background-color: @bg;
+}
+
+
+#clock, #battery, #workspaces .workspace-label, #pulseaudio, #backlight, #window {
+	padding: 6px 12px;
+	border-radius: 0;
+}
+
+#clock {
+	border-left: none;
+}
+
+#workspaces {
+	padding: 0;
+}
+
+#workspaces button {
+	border-radius: 0;
+	padding: 0;
+	border: none
+}
+
+
+#workspaces button.active {
+	background-color: #ffa600;
+}
+
+#workspaces button.active .workspace-label {
+	color: #000
+}
+
+
+
+

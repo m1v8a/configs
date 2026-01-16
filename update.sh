@@ -2,12 +2,7 @@
 
 
 
-getopts "r:c" flag >/dev/null 2>&1
-
-if [[ $flag == "?" ]]; then
-	echo "invalid flag"
-elif [[ $flag == "r" ]]; then
-
+if [[ $1 == "repo" ]]; then
 	# update the repo
 	cp -r ~/.config/scripts/ ./
 	cp -r ~/.config/wofi/ ./
@@ -16,15 +11,14 @@ elif [[ $flag == "r" ]]; then
 
 	cp -r ~/Pictures/wallpapers ./
 
-elif [[ $flag == "c" ]]; then
-
+elif [[ $1 == "config" ]]; then
+	nil
 	# update the config
 	cp -r ./config/scripts/ ~/.config
 	cp -r ./config/wofi/ ~/.config
 	cp -r ./config/waybar/ ~/.config/
-	cp -r ./config/hypr/ ~/.config/
 
-	# update the wallpapers
+       # update the wallpapers
 	cp -r ./wallpapers ~/Pictures
 fi
 
