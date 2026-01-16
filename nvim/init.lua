@@ -1,3 +1,5 @@
+require("config.lazy")
+
 -- Set <space> as the leader key
 -- See `:help mapleader`
 -- NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
@@ -25,15 +27,20 @@ vim.api.nvim_create_autocmd('UIEnter', {
   end,
 })
 
+-- Set global tab/indent behavior
+vim.o.tabstop = 2
+vim.o.shiftwidth = 2
+vim.o.softtabstop = 2
+vim.o.expandtab = true
+
 -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
 vim.o.ignorecase = true
 vim.o.smartcase = true
-
 -- Highlight the line where the cursor is on
 vim.o.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
-vim.o.scrolloff = 10
+vim.o.scrolloff = 20
 
 -- Show <tab> and trailing spaces
 vim.o.list = true
@@ -57,8 +64,12 @@ vim.keymap.set({ 'n' }, '<A-j>', '<C-w>j')
 vim.keymap.set({ 'n' }, '<A-k>', '<C-w>k')
 vim.keymap.set({ 'n' }, '<A-l>', '<C-w>l')
 
+vim.keymap.set({ 'n' }, '<space><space>x', '<cmd>source %<CR>')
+vim.keymap.set({ 'n' }, '<space>x', ':.lua<CR>')
+vim.keymap.set({ 'v' }, '<space>x', ':lua<CR>')
+
 -- [[ Basic Autocommands ]].
--- See `:h lua-guide-autocommands`, `:h autocmd`, `:h nvim_create_autocmd()`
+-- See `:h lua-guide-autocommands`, `:h autcmd`, `:h nvim_create_autocmd()`
 
 -- Highlight when yanking (copying) text.
 -- Try it with `yap` in normal mode. See `:h vim.hl.on_yank()`
@@ -86,3 +97,5 @@ end, { desc = 'Print the git blame for the current line' })
 -- For example, to add the "nohlsearch" package to automatically turn off search highlighting after
 -- 'updatetime' and when going to insert mode
 vim.cmd('packadd! nohlsearch')
+
+
