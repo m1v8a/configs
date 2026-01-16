@@ -5,15 +5,19 @@ sudo pacman --noconfirm -Syu
 
 sudo pacman -S --noconfirm --needed git base-devel
 
-sudo pacman --noconfirm -S waybar wofi kitty chromium code gimp
-sudo pacman --noconfirm -S ttf-firacode-nerd brightnessctl swaybg xdg-user-dirs
+# WOFI, KITTY, CHROME, VSCODE, GIMP, NVIM
+sudo pacman --noconfirm -S --needed waybar wofi kitty chromium code gimp neovim
+# TTF-FIRACODE, BRIGHTNESSCTL, SWAYBG, XDG-USER-DIRS
+sudo pacman --noconfirm -S --needed ttf-firacode-nerd brightnessctl swaybg xdg-user-dirs
+
+# ZEN BROWSER
 yay -S --noconfirm zen-browser-bin
 
-fc-cache -fv
+# FONTS fc-cache -fv
 sudo usermod -aG video $USER
 xdg-user-dirs-update
 
-# install yay
+# YAY
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
