@@ -1,6 +1,7 @@
 require("config.options")
 require("config.keymaps")
 
+
 vim.pack.add({
 	{ src = "https://github.com/nvim-treesitter/nvim-treesitter"},
 	{ src = "https://github.com/neovim/nvim-lspconfig"},
@@ -27,11 +28,11 @@ vim.pack.add({
 
 require("plugins.treesitter")
 require("plugins.rosepine")
+require("plugins.cmp")
 require("plugins.telescope")
 
 require("nvim-autopairs").setup()
 require("nvim-ts-autotag").setup()
-require("cmp").setup()
 require("mason").setup()
 
 require("mini.surround").setup()
@@ -45,3 +46,9 @@ vim.lsp.enable("cssls")
 vim.lsp.enable("emmet_language_server")
 vim.lsp.enable("bashls")
 
+
+vim.api.nvim_set_hl(0, "CursorLine", { fg = "NONE", bg = "#00202e" })
+vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#886300" })
+vim.api.nvim_set_hl(0, "LineNr", { fg = "#004786" })
+vim.api.nvim_set_hl(0, "Normal", { bg = "#0c080a" })
+vim.api.nvim_set_hl(0, "StatusLine", { bg = "NONE" })
