@@ -12,7 +12,6 @@ if [[ $1 == "repo" ]]; then
 	cp -r ~/Pictures/wallpapers ./
 
 elif [[ $1 == "config" ]]; then
-	nil
 	# update the config
 	cp -r ./config/scripts/ ~/.config
 	cp -r ./config/wofi/ ~/.config
